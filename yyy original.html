@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Project By KHTPJ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* ================= GLOBAL ================= */
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.8;
+}
+
+/* ================= WELCOME OVERLAY ================= */
+#welcomeAd{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#020c1b,#0a1a2f);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    animation:fadeOut 3s ease forwards;
+    animation-delay:15s;
+}
+
+.welcome-box{
+    text-align:center;
+    color:white;
+    animation:zoomIn 12s ease;
+}
+
+.welcome-box h1{
+    font-size:50px;
+    margin-bottom:10px;
+    animation:glow 8s infinite alternate;
+}
+
+.welcome-box p{
+    font-size:20px;
+    opacity:0.9;
+}
+
+.skip-btn{
+    margin-top:25px;
+    padding:12px 26px;
+    background:#00c3ff;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+@keyframes zoomIn{
+    from{transform:scale(0.6); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px #00c3ff;}
+    to{text-shadow:0 0 25px #00c3ff;}
+}
+
+@keyframes fadeOut{
+    to{opacity:0; visibility:hidden;}
+}
+
+/* ================= HEADER ================= */
+header{
+    background:linear-gradient(135deg,#0a1a2f,#0d3b66);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{
+    font-size:42px;
+}
+header p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* ================= NAV ================= */
+nav{
+    background:#021428;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a{
+    color:#ffffff;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:600;
+}
+nav a:hover{
+    color:#00c3ff;
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:60px 8%;
+    background:white;
+    margin-bottom:15px;
+}
+section h2{
+    font-size:32px;
+    color:#0a1a2f;
+}
+section h3{
+    color:#0d3b66;
+    margin-top:30px;
+}
+
+/* ================= GRID ================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* ================= IMAGE ================= */
+.big-img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* ================= TABLE ================= */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+table th, table td{
+    border:1px solid #ccc;
+    padding:14px;
+}
+table th{
+    background:#0d3b66;
+    color:white;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+    background:#0d3b66;
+    color:white;
+    padding:14px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+}
+.btn:hover{
+    background:#00c3ff;
+    color:#000;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#021428;
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+footer a{
+    color:#00c3ff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== WELCOME AD ===== -->
+<div id="welcomeAd">
+    <div class="welcome-box">
+        <h1>Welcome to Our Website</h1>
+        <h3>Cyber Security Learning & Protection Platform</h3>
+        <button class="skip-btn" onclick="closeAd()">Enter Website</button>
+		<Br>
+		<Br>
+		<Br>
+		<Br>
+		<Br>
+		<Br>
+		<h3 style="font-weight:bold;box-shadow:3px 2px 5px white;"> <i> Design by BWE IT Course Group A Members </i> </h3>
+    </div>
+</div>
+
+<script>
+function closeAd(){
+    document.getElementById("welcomeAd").style.display="none";
+}
+</script>
+
+<!-- ===== MAIN CONTENT (UNCHANGED) ===== -->
+
+<header>
+
+<h1 style="font-weight:bold;box-shadow:3px 2px 5px white;">Cyber Security Learning Platform</h1>
+<h3 style="
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-REcN_xZ7w9OzIKcFGcyYD2VlSWnN4VU5JA&s');
+  background-size: cover;
+  background-position: center;
+  padding: 120px;
+  height:30px
+  color: white;
+  font-size:40px;
+  color:#ff1493;
+  font-weight:bold;box-shadow:3px 2px 5px Dark pink;"
+">
+<i>Welcome to a Cyber security education and protection platform designed for IT learners.</i>
+</h3>
+</header>
+<nav>
+<a href="#learn">Learn</a>
+<a href="#virus">Learn Computer Viruses</a>
+<a href="#guard">Virus Guard Solutions</a>
+<a href="#buy">Buy </a>
+<a href="#resources">Resources</a>
+</nav>
+
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security Learning & Virus Guard Solutions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.8;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#0a1a2f,#0d3b66);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+header h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+header p{
+    font-size:18px;
+    max-width:900px;
+    margin:auto;
+}
+
+/* NAV */
+nav{
+    background:#021428;
+    padding:12px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+nav a{
+    color:#ffffff;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:600;
+}
+nav a:hover{
+    color:#00c3ff;
+}
+
+/* SECTIONS */
+section{
+    padding:60px 8%;
+    background:white;
+    margin-bottom:15px;
+}
+section h2{
+    font-size:32px;
+    color:#0a1a2f;
+    margin-bottom:20px;
+}
+section h3{
+    color:#0d3b66;
+    margin-top:30px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* IMAGE */
+.big-img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:25px;
+}
+table th, table td{
+    border:1px solid #ccc;
+    padding:14px;
+    text-align:left;
+}
+table th{
+    background:#0d3b66;
+    color:white;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    background:#0d3b66;
+    color:white;
+    padding:14px 28px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+}
+.btn:hover{
+    background:#00c3ff;
+    color:#000;
+}
+
+/* FOOTER */
+footer{
+    background:#021428;
+    color:white;
+    padding:30px;
+    text-align:center;
+}
+footer a{
+    color:#00c3ff;
+    text-decoration:none;
+}
+.header {
+  height: 300px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStynR0c8bRfID3SEArx3LtRcTHM8j0WlCARw&s");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header h1 {
+  color: white;
+  padding: 15px;
+  background: rgba(0,0,0,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header">
+<h1> Cyber Security Learning Platform</h1>
+</div>
+<h3>
+Welcome to a professional cyber security education and protection platform designed for advanced IT learners.
+This website focuses on deep cyber security knowledge, real-world virus analysis, and professional-grade
+virus guard solutions for individuals and organizations.
+</h3>
+</header>
+<nav>
+<a href="#learn">Learn</a>
+<a href="#virus">Learn Computer Viruses</a>
+<a href="#guard">Virus Guard Solutions</a>
+<a href="#buy">Buy </a>
+<a href="#resources">Resources</a>
+</nav>
+
+<!-- LEARN SECTION -->
+<div class="box">
+<section id="learn">
+<h2>Learn Cyber Security </h2>
+
+<p>
+Cyber Security is the discipline that protects computer systems, networks, data, and digital identities
+from cyber threats. In the modern digital era, cyber attacks are increasing in complexity, scale, and impact.
+This learning section is structured as an advanced hierarchy to help learners understand both theoretical
+and practical dimensions of cyber security in a professional manner.
+</p>
+<p>
+This platform follows internationally recognized cyber security frameworks and aligns with industry standards
+used by universities and professional training institutes. Each sub-topic is interconnected and designed to
+build a complete cyber security mindset rather than isolated technical skills.
+</p>
+<ol>
+<li><a>Network Security</a> </li>
+<br>
+<li><a>Information Secrity</a></li>
+<br>
+<li><a>End-Point Security</a></li>
+<br>
+<li>
+<a>Application Security</a></li>
+<br>
+<li>
+<a>Cybercrime Prevention</a></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="box">
+<h3 class="underline">1. Network Security</h3>
+   <P>   Protects computer networks from unauthorized access, viruses, and cyberattacks.
+   Examples: Firewalls, secure Wi-Fi, network monitoring. </P>
+<div class="grid">
+<img class="small-img" src="https://www.brightdefense.com/wp-content/uploads/2025/04/Network-Security-768x570.png" width="600px" height="400px" alt="Cyber Security">
+</div>
+<ul>
+<li>Network security is the practice of protecting computer networks from unauthorized access, misuse, and cyber attacks. It focuses on securing both wired and wireless networks that are used to transmit data between devices. Network security ensures that only authorized users can access network resources while preventing hackers from stealing or damaging information. By implementing strong network security measures, organizations can protect sensitive data, maintain system performance, and ensure reliable communication. Without proper network security, attackers can easily intercept data, disrupt services, or gain control of network systems. </li>
+
+<li>Network security uses various tools and technologies such as firewalls, intrusion detection systems (IDS), intrusion prevention systems (IPS), and virtual private networks (VPNs). Firewalls control incoming and outgoing traffic based on security rules, while IDS and IPS monitor network activity to detect and block suspicious behavior. VPNs encrypt data sent over public networks, making it difficult for attackers to read information. These tools work together to create multiple layers of protection, ensuring that networks remain safe from both internal and external threats.
+ </li>
+<li> A key goal of network security is to ensure secure data transmission across networks. When data travels through the internet or internal networks, it can be intercepted by attackers if not properly protected. Network security uses encryption and authentication methods to protect data during transmission. This ensures confidentiality, integrity, and availability of information. Secure networks are essential for businesses, schools, and individuals to communicate safely, access online services, and share information without the risk of cyber attacks or data loss.</li>
+ </ul>
+<div>
+</div>
+</div>
+<div class="box">
+<h3 class="underline">2.Information Security</h3>
+<p>
+Protects data from being accessed or changed by unauthorized people.
+Examples: Encryption, passwords, secure storage.
+
+</p>
+<div class="grid">
+<img class="middle-img" src="https://cdn.newsfirst.lk/english-uploads/2024/03/sri%20lanka%20cert%20computer%20emergency%20readiness%20team-749813.jpg" width="500px" height="300px" alt="Cyber Security">
+</div>
+<ul>
+<li>Information security focuses on protecting data from unauthorized access, disclosure, modification, or destruction. This includes personal information, financial records, business documents, and confidential files. Information security ensures that data remains accurate and available only to authorized users. In today’s digital world, large amounts of information are stored and shared electronically, making it a valuable target for cyber criminals. Effective information security helps organizations protect sensitive data, maintain trust, and comply with legal and ethical requirements. </li>
+<li>The foundation of information security is based on three main principles known as the CIA triad: confidentiality, integrity, and availability. Confidentiality ensures that information is accessible only to authorized users. Integrity ensures that data is accurate and has not been altered without permission. Availability ensures that information is accessible when needed. These principles guide the design of security systems and policies. By maintaining the CIA triad, organizations can protect data from threats such as hacking, data breaches, and accidental loss. </li>
+<li>Information security uses various techniques such as passwords, encryption, access controls, and regular data backups. Strong passwords and authentication methods prevent unauthorized access. Encryption converts data into an unreadable format, protecting it even if it is stolen. Backups ensure that data can be recovered in case of system failure or cyber attacks. These measures help reduce risks and ensure that information remains secure, reliable, and protected against both technical failures and malicious activities. </li>
+ </ul>
+ </div>
+ </div>
+<div class="box">
+<h3 class="underline">3.End-Point Security </h3>
+<p>
+Secures devices like laptops, phones, and tablets.
+Examples: Device locks, antivirus, two-factor authentication.
+
+</p>
+<div class="grid">
+<img class="small-img" src="https://cdn.educba.com/academy/wp-content/uploads/2025/08/What-is-Endpoint-Security.jpg" width="600px" height="400px" alt="Cyber Security">
+</div>
+<ul>
+<li>End-point security focuses on protecting individual devices such as computers, laptops, tablets, and mobile phones that connect to a network. These devices are often the first target of cyber attackers because they are used by end users. If a single device is compromised, it can be used as an entry point to attack the entire network. End-point security ensures that each device is properly secured before it is allowed to access network resources, reducing the overall risk of cyber attacks. </li>
+<li>Common threats to endpoints include viruses, malware, ransomware, spyware, and unauthorized access. Cyber attackers use malicious software to steal data, damage systems, or gain control of devices. End-point security solutions such as antivirus software, firewalls, and anti-malware tools help detect and remove these threats. By continuously monitoring device activity, endpoint security systems can quickly respond to suspicious behavior and prevent the spread of malware across the network. </li>
+<li>Regular software updates and security patches play a major role in endpoint security. Many cyber attacks exploit known vulnerabilities in outdated software. By keeping operating systems and applications up to date, users can close security gaps that attackers might exploit. Endpoint security also includes user awareness, such as avoiding suspicious links and downloads. Together, these measures help protect devices, prevent cyber attacks, and maintain a secure computing environment. </li>
+ </ul>
+</div>
+<div class="box">
+<h3 class="underline"> 4.Application Security </h3>
+
+<p> Keeps software and apps safe by fixing bugs and blocking attacks.
+Examples: Secure coding, app updates, antivirus tools.</p>
+<div class="grid">
+<img class="small-img" src="https://www.atatus.com/glossary/content/images/size/w1000/2021/06/Application-Security--1-.jpeg" width="600px" height="400px" alt="Cyber Security">
+</div>
+<ul>
+<li>Application security involves protecting software applications from vulnerabilities and cyber attacks throughout their lifecycle. This includes applications such as websites, mobile apps, and desktop software. Cyber attackers often target applications because they can contain security weaknesses that allow unauthorized access. Application security ensures that software is designed, developed, and maintained in a secure manner to prevent data breaches and system compromise. </li>
+<li>Common application security threats include SQL injection, cross-site scripting (XSS), and authentication attacks. These attacks exploit weaknesses in application code to access sensitive data or manipulate system behavior. Application security uses techniques such as input validation, secure authentication, and access controls to prevent such attacks. Regular testing and vulnerability assessments help identify and fix security issues before attackers can exploit them. </li>
+<li>Secure coding practices are essential for application security. Developers must follow security guidelines and standards when writing code to reduce vulnerabilities. This includes proper error handling, secure data storage, and encryption. Regular updates and security patches are also important to address newly discovered vulnerabilities. Strong application security helps protect user data, maintain system reliability, and build trust in software products. </li>
+ </ul>
+ </div>
+ <h3 class="underline">5.Cybercrime Prevention </h3>
+  <style>
+    p {background-color: #e8f4ff;
+  padding: 15px;
+  margin: 10px 0;
+  border-left: 5px solid #2196f3;}
+  
+  h2 { background-color:deeppink;
+  padding: 12px 16px;
+  border-left: 6px solid #FF1493;
+  border-radius: 5px;}
+  h2{text-decoration:underline;}
+  
+ .underline{text-decoration:underline;
+ background-color:deeppink;
+  padding: 12px 16px;
+  border-left: 6px solid #FF1493;
+  border-radius: 5px;}
+  img {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;}
+	.box {
+    border: 2px solid #FF1493;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 10px;}
+  </style>
+ <div class="box"> 
+ <p>Cybercrime Prevention focuses on detecting and stopping illegal activities on the internet, such as hacking, phishing, fraud, and identity theft.
+Protects both individuals and organizations from cybercriminals
+Involves policies, regulations, and legal measures
+Encourages safe online behavior and awareness
+Examples & Tools:
+Anti-phishing tools
+Monitoring suspicious online transactions
+Incident response plans for cyber attacks
+Importance:
+Cybercrime can cause financial loss, data breaches, reputational damage, and even legal problems. Prevention ensures a safer digital environment. </P>
+<div class="grid">
+<img class="small-img" src="https://bsmedia.business-standard.com/_media/bs/img/article/2024-07/24/full/1721806391-6188.jpg?im=FeatureCrop,size=(826,465)" width="600px" height="300px" alt="Cyber Security">
+</div>
+<ul>
+<li> Cyber crime refers to illegal activities carried out using computers, networks, or the internet. These crimes are committed by individuals or groups with malicious intent. Cyber crime can target individuals, organizations, or governments. Common motivations include financial gain, data theft, or causing disruption. As technology advances, cyber crime has become more complex and widespread, making it a serious global issue</li>
+<li>Examples of cyber crime include hacking, phishing, identity theft, online fraud, and spreading malware. Hackers may break into systems to steal data, while phishing attacks trick users into revealing personal information. Identity theft involves using stolen information to commit fraud. These crimes can cause financial losses, damage reputations, and disrupt essential services. Cyber crime affects both individuals and organizations, highlighting the need for strong security measures. </li>
+<li>Cyber crime is controlled and punished through cyber laws and regulations. Many countries have introduced laws to prevent cyber crimes and protect users. Law enforcement agencies investigate cyber crimes and take legal action against offenders. User awareness and education also play an important role in preventing cyber crime. By understanding cyber threats and following safe online practices, individuals and organizations can reduce the risk of becoming victims of cyber crime. </li>
+ </ul>
+<iframe 
+width="560" height="315" src="https://www.youtube.com/embed/Cf152evvw0s?si=sV_ORO9n7Fx2fUJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+<!-- VIRUS SECTION -->
+</div>
+<div class="box">
+<section id="virus">
+<h2>Computer Viruses – Deep Technical Explanation</h2>
+
+<p>
+A computer virus is a malicious program designed to replicate itself and spread from one system to another.
+Viruses can corrupt data, steal sensitive information, disable systems, and open backdoors for attackers.
+Modern viruses are often part of larger malware families including worms, trojans, ransomware, and spyware.
+</p>
+
+<table>
+<tr>
+<th>Virus Type</th>
+<th>Description</th>
+<th>Impact</th>
+</tr>
+<tr>
+<td>File Infector</td>
+<td>Attaches to executable files and spreads when the file runs</td>
+<td>Data corruption, system instability</td>
+</tr>
+<tr>
+<td>Ransomware</td>
+<td>Encrypts files and demands payment</td>
+<td>Severe data loss</td>
+</tr>
+<tr>
+<td>Spyware</td>
+<td>Secretly monitors user activity</td>
+<td>Privacy breach</td>
+</tr>
+</table>
+</section>
+</div>
+<div class="box">
+
+<!-- VIRUS GUARD -->
+<section id="guard">
+<h2>Virus Guard & Cyber Protection Solutions</h2>
+
+<p>
+Virus guards are advanced security solutions designed to detect, prevent, and remove malicious software.
+Professional virus guards use heuristic analysis, behavior-based detection, AI threat intelligence,
+and real-time protection to secure systems against known and unknown threats.
+</p>
+<p>
+Enterprise-grade virus guards protect endpoints, servers, and cloud environments. They provide centralized
+management, automated updates, incident response, and compliance reporting for organizations.
+</p>
+</div>
+</div>
+</section>
+</div>
+<div class="box">
+<!-- BUY -->
+<section id="buy">
+<h2>Buy Virus Guard Products</h2>
+
+<table>
+<tr>
+<th>Product</th>
+<th>Features</th>
+<th>Action</th>
+</tr>
+<tr>
+<td>Basic Virus Guard</td>
+<td>Real-time protection, malware removal</td>
+<td><a class="btn" href="https://www.kaspersky.com" target="_blank">Buy Now</a></td>
+</tr>
+<tr>
+<td>Advanced Security Suite</td>
+<td>Firewall, ransomware protection, cloud security</td>
+<td><a class="btn" href="https://www.bitdefender.com" target="_blank">Buy Now</a></td>
+</tr>
+</table>
+</section>
+</div>
+<div class="box">
+<!-- RESOURCES -->
+<section id="resources">
+<h2>External Cyber Security Resources</h2>
+<ul>
+<li><a href="https://www.cisa.gov" target="_blank">Cybersecurity & Infrastructure Security Agency</a></li>
+<li><a href="https://owasp.org" target="_blank">OWASP Security Projects</a></li>
+<li><a href="https://www.nist.gov/cyberframework" target="_blank">NIST Cybersecurity Framework</a></li>
+</ul>
+</section>
+</div>
+<footer>
+<h3>
+© 04/01/2026 Cyber Security Platform | Designed for IT Learning 
+<br>
+© Created By Koshila-Hashma-Tharindya-Praveen-Janith
+<br>
+For Final Project Of BWE IT Course.
+<br>
+|THANK YOU!|
+</h3>
+</footer>
+
+</body>
+</html>
